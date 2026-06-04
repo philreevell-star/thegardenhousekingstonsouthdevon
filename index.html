@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Garden House – One Bedroom Holiday Cottage, Kingston, South Devon</title>
+<meta name="description" content="A beautiful one bedroom holiday cottage for two in Kingston, South Devon. Nestled in a tranquil garden near Wonwell Sands beach, the South Devon Coastal Path and the South Hams AONB. Book now on Holiday Cottages.">
+<meta name="keywords" content="one bedroom holiday cottage Kingston South Devon, holiday rental Kingston Devon, South Hams holiday cottage, couples retreat Devon, Wonwell Sands accommodation, Bigbury on Sea cottage, South Devon coastal holiday, self catering Kingston Devon">
+<meta property="og:title" content="The Garden House – One Bedroom Holiday Cottage, Kingston, South Devon">
+<meta property="og:description" content="A secret garden retreat for two in the South Hams. Steps from the South Devon Coastal Path, minutes from Wonwell Sands beach.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thegardenhousekingston.co.uk/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #6b7c5e;
+    --sage-light: #e8ede3;
+    --sage-dark: #3d4836;
+    --cream: #f9f6f0;
+    --sand: #e8dcc8;
+    --stone: #8c7e6a;
+    --ink: #2a2620;
+    --mist: #b8c4b0;
+    --accent: #c4a882;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 2.5rem;
+    background: rgba(249,246,240,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(139,126,106,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--sage); }
+  .nav-cta {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--sage-dark);
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    transition: background 0.25s;
+  }
+  .nav-cta:hover { background: var(--sage); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 4.5rem;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem 5rem 5rem;
+    position: relative;
+  }
+  .hero-text::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(135deg, var(--cream) 0%, #eee8dc 100%);
+    z-index: -1;
+  }
+  .eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.25rem;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--sage);
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--stone);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+    color: #5a5248;
+    max-width: 38ch;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  .pill {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--mist);
+    color: var(--sage-dark);
+    background: transparent;
+  }
+  .btn-primary {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--sage-dark);
+    padding: 1rem 2.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+  .btn-primary:hover {
+    background: var(--sage);
+    transform: translateY(-1px);
+  }
+  .hero-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+  }
+  .hero-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-image-overlay {
+    position: absolute;
+    bottom: 2rem; left: -1.5rem;
+    background: var(--cream);
+    padding: 1.25rem 1.75rem;
+    border-left: 3px solid var(--sage);
+    min-width: 220px;
+  }
+  .overlay-stat {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--sage-dark);
+    line-height: 1;
+  }
+  .overlay-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-top: 0.25rem;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 5rem;
+    margin: 0;
+  }
+  .divider-line { flex: 1; height: 1px; background: var(--sand); }
+  .divider-leaf {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--stone);
+    white-space: nowrap;
+  }
+
+  /* ── FEATURES ── */
+  .features {
+    padding: 5rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  .feature {
+    position: relative;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--sand);
+  }
+  .feature-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--sand);
+    line-height: 1;
+    position: absolute;
+    top: -0.5rem;
+    right: 0;
+  }
+  .feature-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+  .feature-text {
+    font-size: 0.88rem;
+    color: var(--stone);
+    line-height: 1.8;
+  }
+
+  /* ── GALLERY STRIP ── */
+  .gallery-strip {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 320px;
+    gap: 4px;
+    margin: 0 5rem 5rem;
+  }
+  .gallery-strip img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .gallery-item { overflow: hidden; }
+  .gallery-item:hover img { transform: scale(1.03); }
+
+  /* ── LOCATION BAND ── */
+  .location-band {
+    background: var(--sage-dark);
+    color: var(--cream);
+    padding: 4rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .location-hed {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--cream);
+  }
+  .location-hed em { font-style: italic; color: var(--mist); }
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .location-item { border-left: 2px solid var(--sage); padding-left: 1rem; }
+  .location-dist {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .location-place {
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-top: 0.2rem;
+  }
+
+  /* ── REVIEW ── */
+  .review-section {
+    padding: 5rem 5rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .review-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.4;
+    position: relative;
+    padding-left: 2rem;
+  }
+  .review-quote::before {
+    content: '\201C';
+    position: absolute;
+    left: -0.2rem; top: -0.5rem;
+    font-size: 5rem;
+    color: var(--sage-light);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+  }
+  .review-attr {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    padding-left: 2rem;
+  }
+  .review-stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .review-aside {
+    background: var(--sage-light);
+    padding: 2.5rem;
+    border-left: 3px solid var(--sage);
+  }
+  .review-aside-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--sage-dark);
+    margin-bottom: 1rem;
+  }
+  .checklist { list-style: none; }
+  .checklist li {
+    font-size: 0.88rem;
+    color: var(--sage-dark);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(107,124,94,0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--sage);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    background: var(--cream);
+    border-top: 1px solid var(--sand);
+    border-bottom: 1px solid var(--sand);
+    padding: 5rem 5rem;
+    text-align: center;
+  }
+  .cta-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .cta-banner p {
+    font-size: 0.95rem;
+    color: var(--stone);
+    max-width: 55ch;
+    margin: 0 auto 2.5rem;
+  }
+  .btn-large {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--sage-dark);
+    padding: 1.1rem 2.8rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-large:hover { background: var(--sage); transform: translateY(-1px); }
+  .btn-note {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--stone);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: var(--mist);
+    padding: 2.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+  footer p { font-size: 0.75rem; color: var(--stone); }
+  footer a { color: var(--mist); font-size: 0.75rem; text-decoration: underline; }
+
+  /* ── SEO TEXT (visually subtle, but readable and indexed) ── */
+  .seo-section {
+    background: #f2ede5;
+    padding: 3.5rem 5rem;
+    border-top: 1px solid var(--sand);
+  }
+  .seo-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .seo-section p {
+    font-size: 0.88rem;
+    color: var(--stone);
+    max-width: 80ch;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+  }
+  .delay-1 { animation-delay: 0.15s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.45s; }
+  .delay-4 { animation-delay: 0.6s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-text { padding: 3rem 2rem; }
+    .hero-image { min-height: 50vw; }
+    .features { grid-template-columns: 1fr; padding: 3rem 2rem; }
+    .gallery-strip { grid-template-columns: 1fr 1fr; grid-template-rows: auto; margin: 0 2rem 3rem; }
+    .gallery-strip .gallery-item:first-child { grid-column: 1 / -1; }
+    .location-band { grid-template-columns: 1fr; padding: 3rem 2rem; }
+    .review-section { grid-template-columns: 1fr; padding: 3rem 2rem; }
+    .cta-banner { padding: 3rem 2rem; }
+    .divider { padding: 0 2rem; }
+    footer { padding: 2rem; flex-direction: column; text-align: center; }
+    nav { padding: 1rem 1.5rem; }
+    .seo-section { padding: 3rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">The <span>Garden</span> House</a>
+  <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="nav-cta" target="_blank" rel="noopener">Check Availability</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow fade-up">Kingston, South Devon &nbsp;·&nbsp; Sleeps 2</p>
+    <h1 class="hero-title fade-up delay-1">A secret<br><em>garden</em><br>for two</h1>
+    <p class="hero-subtitle fade-up delay-2">One bedroom holiday cottage · South Hams AONB</p>
+    <p class="hero-desc fade-up delay-3">Tucked at the end of a winding garden path in the beautiful village of Kingston, this tranquil chalet retreat offers the perfect escape for couples — birdsong, a sun-drenched deck, and the South Devon coast on your doorstep.</p>
+    <div class="hero-pills fade-up delay-3">
+      <span class="pill">1 Bedroom</span>
+      <span class="pill">Sleeps 2</span>
+      <span class="pill">Coastal Path</span>
+      <span class="pill">Short Breaks</span>
+      <span class="pill">AONB</span>
+    </div>
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="btn-primary fade-up delay-4" target="_blank" rel="noopener">View Dates &amp; Book &rarr;</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://files.originalcottages.co.uk/TOCCL/1/5/9/3/2/15932591136826f56d73f72.jpg"
+         alt="The Garden House exterior with decked seating area, Kingston, South Devon"
+         loading="eager">
+    <div class="hero-image-overlay">
+      <div class="overlay-stat">1.5 mi</div>
+      <div class="overlay-label">to Wonwell Sands beach</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider" style="padding-top: 3rem; padding-bottom: 3rem;">
+  <div class="divider-line"></div>
+  <span class="divider-leaf">A retreat unlike any other in Kingston, South Devon</span>
+  <div class="divider-line"></div>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+  <article class="feature">
+    <span class="feature-num">01</span>
+    <h3 class="feature-title">The Secret Approach</h3>
+    <p class="feature-text">Follow a paved garden path for 40 metres through beautifully landscaped grounds, arriving at your own private chalet — an arrival that feels like discovering something special.</p>
+  </article>
+  <article class="feature">
+    <span class="feature-num">02</span>
+    <h3 class="feature-title">Open-Plan Living</h3>
+    <p class="feature-text">Step through French doors onto a spacious deck, then inside to a well-designed open-plan space with a cosy lounge, double bed, and a kitchen stocked for cooking with local South Devon produce.</p>
+  </article>
+  <article class="feature">
+    <span class="feature-num">03</span>
+    <h3 class="feature-title">Coastal Walks &amp; Beaches</h3>
+    <p class="feature-text">The South Devon Coastal Path passes nearby. Wonwell Sands (1.5 miles), Ayrmer Cove (2.5 miles), and Bigbury-on-Sea with Burgh Island are all within easy reach.</p>
+  </article>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery-strip">
+  <div class="gallery-item">
+    <img src="https://files.originalcottages.co.uk/TOCCL/8/6/8/0/2/8680225546826f54f58859.jpg"
+         alt="Decked outdoor seating area at The Garden House holiday cottage, Kingston Devon" loading="lazy">
+  </div>
+  <div class="gallery-item">
+    <img src="https://files.originalcottages.co.uk/TOCCL/1/1/8/4/5/11845300186826f56570f44.jpg"
+         alt="Interior of The Garden House self-catering cottage, South Devon" loading="lazy">
+  </div>
+  <div class="gallery-item">
+    <img src="https://files.originalcottages.co.uk/TOCCL/5/5/9/3/6/5593623496826f55ab46e7.jpg"
+         alt="Garden surroundings at The Garden House, Kingston, South Hams" loading="lazy">
+  </div>
+</div>
+
+<!-- LOCATION BAND -->
+<section class="location-band">
+  <div>
+    <h2 class="location-hed">A perfect base for <em>South Devon</em></h2>
+    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--mist); line-height: 1.8;">Kingston sits within the South Hams Area of Outstanding Natural Beauty — one of England's most unspoilt coastal landscapes. From here, the best of South Devon is effortlessly close.</p>
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="btn-primary" style="margin-top: 2rem; background: var(--accent); color: var(--ink);" target="_blank" rel="noopener">Book on Holiday Cottages &rarr;</a>
+  </div>
+  <div class="location-grid">
+    <div class="location-item">
+      <div class="location-dist">1.5 mi</div>
+      <div class="location-place">Wonwell Sands</div>
+    </div>
+    <div class="location-item">
+      <div class="location-dist">2.5 mi</div>
+      <div class="location-place">Ayrmer Cove</div>
+    </div>
+    <div class="location-item">
+      <div class="location-dist">5 mi</div>
+      <div class="location-place">Bigbury-on-Sea &amp; Burgh Island</div>
+    </div>
+    <div class="location-item">
+      <div class="location-dist">13.5 mi</div>
+      <div class="location-place">Salcombe</div>
+    </div>
+    <div class="location-item">
+      <div class="location-dist">20 mi</div>
+      <div class="location-place">Dartmouth</div>
+    </div>
+    <div class="location-item">
+      <div class="location-dist">0 mi</div>
+      <div class="location-place">South West Coast Path</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW SECTION -->
+<section class="review-section">
+  <div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote class="review-quote">
+      A lovely secluded spot at the end of a garden. Surprisingly spacious inside and lovely to be able to help ourselves to the homegrown veg.
+    </blockquote>
+    <p class="review-attr">Verified guest &nbsp;·&nbsp; July 2025 &nbsp;·&nbsp; via Holiday Cottages</p>
+    <br>
+    <div class="review-stars" style="font-size:0.9rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote class="review-quote" style="font-size: 1.4rem;">
+      A lovely studio in a quiet &amp; peaceful location. The studio was very well equipped — a stylish, restful place to spend a few days walking the coast path.
+    </blockquote>
+    <p class="review-attr">Sue &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; via Holiday Cottages</p>
+  </div>
+  <div class="review-aside">
+    <h3 class="review-aside-title">At a glance</h3>
+    <ul class="checklist">
+      <li>1 double bedroom, sleeps 2</li>
+      <li>1 shower room with heated towel rail</li>
+      <li>Open-plan kitchen &amp; lounge</li>
+      <li>Spacious private deck</li>
+      <li>Washing machine</li>
+      <li>TV &amp; WiFi</li>
+      <li>Coastal path access nearby</li>
+      <li>Short breaks available</li>
+      <li>South Hams AONB setting</li>
+      <li>Peaceful garden surroundings</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Ready to escape to Kingston?</h2>
+  <p>The Garden House is listed exclusively on Holiday Cottages. Check live availability, read all guest reviews, and book securely online.</p>
+  <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="btn-large" target="_blank" rel="noopener">See Availability &amp; Book</a>
+  <span class="btn-note">Opens holidaycottages.co.uk &nbsp;·&nbsp; Secure booking with deposit option</span>
+</section>
+
+<!-- SEO CONTENT (helps Google understand the page topic) -->
+<section class="seo-section">
+  <h2>One Bedroom Holiday Cottage in Kingston, South Devon</h2>
+  <p>The Garden House is a charming one bedroom self-catering holiday cottage in Kingston, a village in the South Hams district of South Devon. It is ideal for couples looking for a peaceful retreat with easy access to the South Devon Coastal Path and some of the region's finest beaches. Kingston is a quiet, unspoilt village set within an Area of Outstanding Natural Beauty (AONB), making it one of the most sought-after locations for a holiday cottage in South Devon.</p>
+  <p>Guests staying at this one bedroom holiday cottage near Bigbury-on-Sea can explore Wonwell Sands beach (1.5 miles), the secluded Ayrmer Cove (2.5 miles), and the iconic Burgh Island — famous for its Art Deco hotel and tidal causeway. The market town of Kingsbridge, the sailing haven of Salcombe, and the historic port of Dartmouth are all within comfortable driving distance.</p>
+  <p>Whether you're looking for a short break walking the South West Coast Path, a romantic couples retreat, or simply a quiet holiday cottage in South Devon with a beautiful garden setting, The Garden House in Kingston offers a genuinely special experience. Book through Holiday Cottages, the UK's leading cottage rental platform.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">The Garden House &nbsp;·&nbsp; Kingston, South Devon</div>
+    <p style="margin-top: 0.4rem;">One bedroom holiday cottage, South Hams, Devon</p>
+  </div>
+  <div style="text-align: right;">
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" target="_blank" rel="noopener">Book on Holiday Cottages</a>
+    <p style="margin-top: 0.4rem;">&copy; 2026 The Garden House</p>
+  </div>
+</footer>
+
+</body>
+</html>

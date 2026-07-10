@@ -71,6 +71,76 @@
     transition: background 0.25s;
   }
   .nav-cta:hover { background: var(--sage); }
+  .nav-explore { position: relative; }
+  .nav-explore > a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 0.35rem; cursor: pointer; }
+  .nav-explore > a::after { content: '▾'; font-size: 0.6rem; color: var(--sage); }
+  .nav-dropdown { display: none; position: absolute; top: calc(100% + 0.75rem); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--sand); box-shadow: 0 8px 24px rgba(0,0,0,0.1); min-width: 180px; z-index: 200; }
+  .nav-dropdown a { display: block; padding: 0.7rem 1.25rem; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--sage-light); color: var(--sage-dark); }
+  .nav-explore:hover .nav-dropdown { display: block; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .nav-hamburger span { width: 22px; height: 2px; background: var(--ink); display: block; }
+  .mobile-menu { display: none; position: fixed; top: 4.5rem; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--sand); z-index: 150; padding: 1rem 1.5rem; }
+  .mobile-menu a { display: block; padding: 0.75rem 0; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu.open { display: block; }
+  @media (max-width: 700px) { .nav-desktop { display: none !important; } .nav-hamburger { display: flex; } }
+
+  /* Dropdown nav */
+  .nav-explore { position: relative; }
+  .nav-explore > a {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
+    display: flex; align-items: center; gap: 0.35rem; cursor: pointer;
+  }
+  .nav-explore > a::after {
+    content: '▾'; font-size: 0.6rem; color: var(--sage);
+  }
+  .nav-dropdown {
+    display: none; position: absolute; top: calc(100% + 0.75rem);
+    left: 50%; transform: translateX(-50%);
+    background: #fff; border: 1px solid var(--sand);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    min-width: 180px; z-index: 200;
+  }
+  .nav-dropdown a {
+    display: block; padding: 0.7rem 1.25rem;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--sand);
+  }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--sage-light); color: var(--sage-dark); }
+  .nav-explore:hover .nav-dropdown { display: block; }
+
+  /* Hamburger for mobile */
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 4px; background: none; border: none;
+  }
+  .nav-hamburger span {
+    width: 22px; height: 2px; background: var(--ink);
+    display: block; transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none; position: fixed; top: 4.5rem; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid var(--sand);
+    z-index: 150; padding: 1rem 1.5rem;
+  }
+  .mobile-menu a {
+    display: block; padding: 0.75rem 0;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--sand);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu.open { display: block; }
+
+  @media (max-width: 700px) {
+    .nav-desktop { display: none; }
+    .nav-hamburger { display: flex; }
+  }
 
   /* ── HERO ── */
   .hero {
@@ -499,14 +569,56 @@
 
 <!-- NAVIGATION -->
 <nav>
-  <a href="#" class="nav-logo">The <span>Garden</span> House</a>
-  <div style="display:flex;align-items:center;gap:1rem;">
-    <a href="#nearby" style="color:var(--ink);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;display:none;" id="nearby-nav-link">Nearby</a>
-    <a href="https://www.instagram.com/thegardenhousesouthdevon" target="_blank" rel="noopener" aria-label="Follow on Instagram" title="Instagram" style="color:var(--sage-dark);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">Instagram</a>
-    <a href="https://www.facebook.com/thegardenhousesouthdevon" target="_blank" rel="noopener" aria-label="Follow on Facebook" title="Facebook" style="color:var(--sage-dark);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">Facebook</a>
-    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="nav-cta" target="_blank" rel="noopener">Check Availability</a>
+  <a href="index.html" class="nav-logo">The <span>Garden</span> House</a>
+
+  <div class="nav-desktop" style="display:flex;align-items:center;gap:1.5rem;">
+    <div class="nav-explore">
+      <a>Explore</a>
+      <div class="nav-dropdown">
+        <a href="beaches.html">Beaches</a>
+        <a href="index.html#walks">Walks</a>
+        <a href="index.html#nearby">Nearby</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/thegardenhousesouthdevon" target="_blank" rel="noopener"
+      style="color:var(--sage-dark);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">Instagram</a>
+    <a href="https://www.facebook.com/thegardenhousesouthdevon" target="_blank" rel="noopener"
+      style="color:var(--sage-dark);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">Facebook</a>
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house"
+      class="nav-cta" target="_blank" rel="noopener">Book</a>
   </div>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="beaches.html">Beaches</a>
+  <a href="index.html#walks">Walks</a>
+  <a href="index.html#nearby">Nearby</a>
+  <a href="https://www.instagram.com/thegardenhousesouthdevon" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://www.facebook.com/thegardenhousesouthdevon" target="_blank" rel="noopener">Facebook</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" target="_blank" rel="noopener" style="color:var(--sage-dark);font-weight:500;">Book Now</a>
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var btn = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.remove('open');
+    });
+  });
+});
+</script>
 
 <!-- HERO -->
 <section class="hero">

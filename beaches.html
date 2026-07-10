@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beaches near The Garden House — Kingston, South Devon</title>
+<meta name="description" content="The best beaches near The Garden House holiday cottage in Kingston, South Devon — Wonwell, Bigbury-on-Sea, North Sands Salcombe and Bantham. Swimming, surfing, paddleboarding and coastal walks.">
+<meta name="keywords" content="beaches near Kingston Devon, Wonwell Beach, Bigbury on Sea beach, North Sands Salcombe, Bantham beach, South Devon beaches, dog friendly beaches South Devon, swimming South Devon">
+<link rel="canonical" href="https://thegardenhousekingstonsouthdevon.co.uk/beaches.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --sage: #6b7c5e; --sage-light: #e8ede3; --sage-dark: #3d4836;
+    --cream: #f9f6f0; --sand: #e8dcc8; --stone: #8c7e6a;
+    --ink: #2a2620; --mist: #b8c4b0; --accent: #c4a882;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--ink); font-weight: 300; line-height: 1.7; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; background: rgba(249,246,240,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(139,126,106,0.15); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--sage); }
+  .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-cta { color: var(--cream) !important; background: var(--sage-dark); padding: 0.6rem 1.2rem; }
+
+  .page-hero {
+    min-height: 50vh; display: flex; align-items: flex-end;
+    background: linear-gradient(to bottom, rgba(42,38,32,0.1), rgba(42,38,32,0.65)),
+                url("images/bigbury-beach.jpg") center 40% / cover no-repeat;
+    padding: 4rem 5rem; margin-top: 4.5rem;
+  }
+  .page-hero-text { max-width: 700px; }
+  .page-eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.75rem; }
+  .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem,5vw,4rem); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 1rem; }
+  .page-title em { font-style: italic; color: var(--mist); }
+  .page-intro { font-size: 1rem; color: rgba(255,255,255,0.82); max-width: 55ch; line-height: 1.8; }
+
+  .beaches-body { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; }
+
+  /* Beach entry */
+  .beach { margin-bottom: 5rem; }
+  .beach:last-child { margin-bottom: 0; }
+  .beach-img-wrap { aspect-ratio: 16/9; overflow: hidden; margin-bottom: 2rem; }
+  .beach-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .beach-header { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; margin-bottom: 1.25rem; }
+  .beach-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem; }
+  .beach-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--ink); }
+  .beach-distance { text-align: right; }
+  .beach-dist-val { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--accent); line-height: 1; }
+  .beach-dist-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
+
+  .beach-desc { font-size: 0.95rem; color: var(--stone); line-height: 1.85; margin-bottom: 1.75rem; max-width: 70ch; }
+
+  .beach-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+  .beach-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border: 1px solid var(--mist); color: var(--sage-dark); }
+
+  .beach-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .beach-info-item { border-left: 3px solid var(--sage); padding-left: 1rem; }
+  .beach-info-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); margin-bottom: 0.25rem; }
+  .beach-info-val { font-size: 0.88rem; color: var(--ink); line-height: 1.5; }
+
+  .insider-tip { background: var(--ink); padding: 1.5rem 1.75rem; margin-bottom: 1rem; display: flex; gap: 1rem; align-items: flex-start; }
+  .tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .insider-tip p { font-size: 0.88rem; color: var(--mist); line-height: 1.7; }
+  .insider-tip strong { color: var(--accent); }
+
+  .beach-divider { border: none; border-top: 1px solid var(--sand); margin: 5rem 0; }
+
+  .placeholder-card { background: var(--sage-light); border: 2px dashed var(--mist); padding: 3rem; text-align: center; aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 2rem; }
+  .placeholder-card p { font-size: 0.88rem; color: var(--stone); font-style: italic; }
+
+  .page-cta { background: var(--sage-dark); padding: 3.5rem 5rem; text-align: center; }
+  .page-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--cream); margin-bottom: 0.75rem; }
+  .page-cta p { font-size: 0.9rem; color: var(--mist); margin-bottom: 1.5rem; }
+  .page-cta a.btn { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); background: transparent; border: 1px solid rgba(255,255,255,0.4); padding: 0.8rem 1.8rem; text-decoration: none; margin: 0.3rem; }
+  .page-cta a.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+
+  footer { background: var(--ink); color: var(--mist); padding: 2rem 5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--cream); }
+  footer a { color: var(--mist); font-size: 0.75rem; text-decoration: underline; }
+  footer p { font-size: 0.75rem; }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .page-hero { padding: 3rem 1.5rem; min-height: 40vh; }
+    .beaches-body { padding: 3rem 1.25rem; }
+    .beach-header { grid-template-columns: 1fr; }
+    .beach-distance { text-align: left; }
+    .page-cta { padding: 2.5rem 1.5rem; }
+    footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+    .nav-links .hide-mobile { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">The <span>Garden</span> House</a>
+  <div class="nav-links">
+    <a href="index.html#walks" class="hide-mobile">Walks</a>
+    <a href="beaches.html" class="hide-mobile">Beaches</a>
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="nav-cta" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-text">
+    <p class="page-eyebrow">South Devon &nbsp;·&nbsp; On the doorstep</p>
+    <h1 class="page-title">Beaches near<br><em>The Garden House</em></h1>
+    <p class="page-intro">From wild estuary sands to surf beaches and sheltered swimming coves — some of South Devon's finest beaches are within easy reach of Kingston.</p>
+  </div>
+</div>
+
+<div class="beaches-body">
+
+  <!-- ── WONWELL ── -->
+  <div class="beach" id="wonwell">
+    <div class="beach-img-wrap">
+      <img src="images/wonwell-beach.jpg" alt="Wonwell Beach on the Erme estuary at low tide, South Devon — wide empty sands and rolling waves">
+    </div>
+    <div class="beach-header">
+      <div>
+        <p class="beach-eyebrow">Estuary beach &nbsp;·&nbsp; Dog friendly all year</p>
+        <h2 class="beach-title">Wonwell Beach</h2>
+      </div>
+      <div class="beach-distance">
+        <div class="beach-dist-val">1.5 mi</div>
+        <div class="beach-dist-label">from Kingston</div>
+      </div>
+    </div>
+
+    <p class="beach-desc">Wonwell is one of those beaches that feels like a genuine discovery. Tucked at the mouth of the Erme estuary, it reveals a wide expanse of wild, unspoilt sand at low tide — rarely busy even in peak season. The walk from Kingston is part of the pleasure: either along the estuary shore at low tide, or along the footpath through the fields. Good for swimming when the tide is right, and completely peaceful whatever the season.</p>
+
+    <div class="beach-tags">
+      <span class="beach-tag">Swimming</span>
+      <span class="beach-tag">Dog friendly</span>
+      <span class="beach-tag">Estuary</span>
+      <span class="beach-tag">Wild &amp; quiet</span>
+      <span class="beach-tag">Low tide best</span>
+    </div>
+
+    <div class="beach-info">
+      <div class="beach-info-item">
+        <div class="beach-info-label">Getting there</div>
+        <div class="beach-info-val">Walk over fields from Kingston (50 mins) or drive to the end of the lane — parking can fill up in summer</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Best at</div>
+        <div class="beach-info-val">Low tide — sands fully revealed and estuary crossing possible</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Facilities</div>
+        <div class="beach-info-val">None on site — bring everything you need</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Dogs</div>
+        <div class="beach-info-val">Welcome all year round</div>
+      </div>
+    </div>
+
+    <div class="insider-tip">
+      <span class="tip-icon">⚑</span>
+      <p><strong>Insider tip:</strong> At low tide it is possible to wade across the Erme to <strong>Mothecombe Beach</strong> on the far bank — and from there it's a short walk to the <strong>Schoolhouse restaurant</strong>. Check tide times carefully before crossing so you can be sure of getting back. The <a href="https://www.bbc.co.uk/weather/coast-and-sea/tide-tables" target="_blank" rel="noopener" style="color:var(--mist);">BBC Tide Tables</a> are reliable and free.</p>
+    </div>
+  </div>
+
+  <hr class="beach-divider">
+
+  <!-- ── BIGBURY-ON-SEA ── -->
+  <div class="beach" id="bigbury">
+    <div class="beach-img-wrap">
+      <img src="images/bigbury-beach.jpg" alt="Bigbury-on-Sea beach with Burgh Island Hotel and Pilchard Inn beyond, South Devon" style="object-position: center 35%;">
+    </div>
+    <div class="beach-header">
+      <div>
+        <p class="beach-eyebrow">Sandy beach &nbsp;·&nbsp; Surf &amp; swimming</p>
+        <h2 class="beach-title">Bigbury-on-Sea</h2>
+      </div>
+      <div class="beach-distance">
+        <div class="beach-dist-val">5 mi</div>
+        <div class="beach-dist-label">from Kingston</div>
+      </div>
+    </div>
+
+    <p class="beach-desc">Bigbury-on-Sea is the area's most complete beach day destination — a wide, sandy beach with everything you need, and iconic Burgh Island sitting just offshore. Whether you're after surfing lessons, a coffee on the sand, a proper lunch, or simply a long swim with the Art Deco hotel as a backdrop, Bigbury delivers. Cross to Burgh Island on foot at low tide, or by the famous sea tractor at high tide.</p>
+
+    <div class="beach-tags">
+      <span class="beach-tag">Swimming</span>
+      <span class="beach-tag">Surfing</span>
+      <span class="beach-tag">Paddleboarding</span>
+      <span class="beach-tag">Café &amp; food</span>
+      <span class="beach-tag">Burgh Island</span>
+      <span class="beach-tag">Beach shop</span>
+    </div>
+
+    <div class="beach-info">
+      <div class="beach-info-item">
+        <div class="beach-info-label">Parking</div>
+        <div class="beach-info-val">Pay by phone car park at the beach, or cheaper field car park at the start of the village — short walk to the sand</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Food &amp; drink</div>
+        <div class="beach-info-val">Venus Café (full menu, licensed) · Beach Baristas for coffee · Pilchard Inn on Burgh Island</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Activities</div>
+        <div class="beach-info-val">Discovery Surf School (next to Venus Café) · Sea tractor to Burgh Island (£2 each way, high tide only)</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Beach shop</div>
+        <div class="beach-info-val">Buckets and spades to wetsuits and swimwear — everything for a day on the beach</div>
+      </div>
+    </div>
+
+    <div class="insider-tip">
+      <span class="tip-icon">⚑</span>
+      <p><strong>Insider tip:</strong> The <strong>field car park at the start of the village</strong> is considerably cheaper than the beach car park and is only a short walk to the sand. Worth the extra few minutes. And if you're planning to cross to <strong>Burgh Island</strong>, check the sea tractor times at the slipway before heading onto the beach — it runs at high tide only.</p>
+    </div>
+  </div>
+
+  <hr class="beach-divider">
+
+  <!-- ── NORTH SANDS SALCOMBE ── -->
+  <div class="beach" id="north-sands">
+    <div class="beach-img-wrap">
+      <img src="images/north-sands.jpg" alt="North Sands beach Salcombe on a sunny summer day — swimmers, paddleboards and beach tents" style="object-position: center 25%;">
+    </div>
+    <div class="beach-header">
+      <div>
+        <p class="beach-eyebrow">Sheltered estuary beach &nbsp;·&nbsp; Swimming &amp; watersports</p>
+        <h2 class="beach-title">North Sands, Salcombe</h2>
+      </div>
+      <div class="beach-distance">
+        <div class="beach-dist-val">14 mi</div>
+        <div class="beach-dist-label">from Kingston</div>
+      </div>
+    </div>
+
+    <p class="beach-desc">North Sands is Salcombe's most accessible and most loved beach — a sheltered sandy cove on the estuary, protected from Atlantic swell and perfect for swimming and paddleboarding. It gets busy on summer days, and rightly so. But the real appeal is what surrounds it: the Winking Prawn next door for one of the best seaside lunches in Devon, and a beautiful coastal path to South Sands from where a ferry takes you straight into Salcombe town for the afternoon.</p>
+
+    <div class="beach-tags">
+      <span class="beach-tag">Swimming</span>
+      <span class="beach-tag">Paddleboarding</span>
+      <span class="beach-tag">Sheltered</span>
+      <span class="beach-tag">Café &amp; restaurant</span>
+      <span class="beach-tag">Ferry to Salcombe</span>
+    </div>
+
+    <div class="beach-info">
+      <div class="beach-info-item">
+        <div class="beach-info-label">Parking</div>
+        <div class="beach-info-val">Car park directly across the road from the beach — arrive early in summer</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Food &amp; drink</div>
+        <div class="beach-info-val">The Winking Prawn — right next to the beach, excellent seafood and wood-fired dishes, garden seating</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Ferry to Salcombe</div>
+        <div class="beach-info-val">Walk the coastal path to South Sands and catch the ferry into Salcombe town — walk back to North Sands car park</div>
+      </div>
+      <div class="beach-info-item">
+        <div class="beach-info-label">Best for</div>
+        <div class="beach-info-val">A full day out — beach, lunch, ferry and a wander around Salcombe</div>
+      </div>
+    </div>
+
+    <div class="insider-tip">
+      <span class="tip-icon">⚑</span>
+      <p><strong>Insider tip:</strong> Do the <strong>North Sands to South Sands walk</strong> before lunch rather than after — it works up an appetite nicely and means you arrive at the Winking Prawn just as the lunch rush is easing. Book a table in advance in summer.</p>
+    </div>
+  </div>
+
+  <hr class="beach-divider">
+
+  <!-- ── BANTHAM (placeholder) ── -->
+  <div class="beach" id="bantham">
+    <div class="placeholder-card">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--sage-dark);font-style:normal;">Bantham Beach</p>
+      <p>Coming soon — one of South Devon's finest surf beaches, just a few miles from The Garden House.</p>
+    </div>
+    <div class="beach-header">
+      <div>
+        <p class="beach-eyebrow">Surf beach &nbsp;·&nbsp; Coming soon</p>
+        <h2 class="beach-title">Bantham</h2>
+      </div>
+      <div class="beach-distance">
+        <div class="beach-dist-val">5 mi</div>
+        <div class="beach-dist-label">from Kingston</div>
+      </div>
+    </div>
+    <p class="beach-desc">Bantham is one of the finest beaches in South Devon — a wide, National Trust-protected surf beach at the mouth of the Avon estuary, with consistent waves, a legendary fish and chip van, and the Sloop Inn in the village for a drink afterwards. Full guide coming soon.</p>
+    <div class="beach-tags">
+      <span class="beach-tag">Surfing</span>
+      <span class="beach-tag">Swimming</span>
+      <span class="beach-tag">National Trust</span>
+      <span class="beach-tag">Dog friendly (seasonal)</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="page-cta">
+  <h3>Plan your stay</h3>
+  <p>The Garden House is perfectly placed for all of these beaches — a one bedroom cottage for two in Kingston village.</p>
+  <a href="index.html#walks" class="btn">Walking guides</a>
+  <a href="index.html#nearby" class="btn">Explore the area</a>
+  <br><br>
+  <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="btn primary" target="_blank" rel="noopener">Book The Garden House</a>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">The Garden House &middot; Kingston, South Devon</div>
+    <p style="margin-top:0.4rem;">One bedroom holiday cottage, South Hams, Devon</p>
+  </div>
+  <div style="text-align:right;">
+    <a href="https://www.instagram.com/thegardenhousesouthdevon" target="_blank" rel="noopener" style="display:block;margin-bottom:0.3rem;">Instagram &bull; @thegardenhousesouthdevon</a>
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" target="_blank" rel="noopener">Book on Holiday Cottages</a>
+    <p style="margin-top:0.4rem;">&copy; 2026 The Garden House</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -25,6 +25,21 @@
   .nav-links { display: flex; align-items: center; gap: 1.5rem; }
   .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
   .nav-cta { color: var(--cream) !important; background: var(--sage-dark); padding: 0.6rem 1.2rem; }
+  .nav-explore { position: relative; }
+  .nav-explore > a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 0.35rem; cursor: pointer; }
+  .nav-explore > a::after { content: '▾'; font-size: 0.6rem; color: var(--sage); }
+  .nav-dropdown { display: none; position: absolute; top: calc(100% + 0.75rem); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--sand); box-shadow: 0 8px 24px rgba(0,0,0,0.1); min-width: 180px; z-index: 200; }
+  .nav-dropdown a { display: block; padding: 0.7rem 1.25rem; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--sage-light); color: var(--sage-dark); }
+  .nav-explore:hover .nav-dropdown { display: block; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .nav-hamburger span { width: 22px; height: 2px; background: var(--ink); display: block; }
+  .mobile-menu { display: none; position: fixed; top: 4.5rem; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--sand); z-index: 150; padding: 1rem 1.5rem; }
+  .mobile-menu a { display: block; padding: 0.75rem 0; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu.open { display: block; }
+  @media (max-width: 700px) { .nav-desktop { display: none !important; } .nav-hamburger { display: flex; } .nav-links .hide-mobile { display: none; } }
   .walk-hero { min-height: 55vh; display: flex; align-items: flex-end; background: linear-gradient(to bottom, rgba(42,38,32,0.1), rgba(42,38,32,0.65)), url("images/sunset.jpg") center 35% / cover no-repeat; padding: 4rem 5rem; margin-top: 4.5rem; }
   .walk-hero-text { position: relative; z-index: 1; max-width: 700px; }
   .walk-num { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.75rem; }
@@ -85,12 +100,37 @@
 
 <nav>
   <a href="index.html" class="nav-logo">The <span>Garden</span> House</a>
-  <div class="nav-links">
-    <a href="index.html#nearby" class="hide-mobile">Walks</a>
-    <a href="index.html#gallery" class="hide-mobile">Gallery</a>
-    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" class="nav-cta" target="_blank" rel="noopener">Book</a>
+  <div class="nav-desktop nav-links" style="display:flex;align-items:center;gap:1.5rem;">
+    <div class="nav-explore">
+      <a>Explore</a>
+      <div class="nav-dropdown">
+        <a href="beaches.html">Beaches</a>
+        <a href="index.html#walks">Walks</a>
+        <a href="index.html#nearby">Nearby</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/thegardenhousesouthdevon" target="_blank" rel="noopener"
+      style="color:var(--sage-dark);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">Instagram</a>
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house"
+      class="nav-cta" target="_blank" rel="noopener">Book</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="beaches.html">Beaches</a>
+  <a href="index.html#walks">Walks</a>
+  <a href="index.html#nearby">Nearby</a>
+  <a href="https://www.instagram.com/thegardenhousesouthdevon" target="_blank" rel="noopener">Instagram</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" target="_blank" rel="noopener" style="color:var(--sage-dark);font-weight:500;">Book Now</a>
+</div>
+<script>
+function toggleMenu(){var m=document.getElementById('mobile-menu');m.classList.toggle('open');document.getElementById('hamburger').setAttribute('aria-expanded',m.classList.contains('open'));}
+document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.mobile-menu a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('mobile-menu').classList.remove('open');});});});
+</script>
 
 <div class="walk-hero">
   <div class="walk-hero-text">

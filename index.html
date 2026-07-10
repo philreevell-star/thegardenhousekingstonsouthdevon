@@ -547,6 +547,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
+    #inside > div:nth-child(2) { grid-template-columns: 1fr !important; }
     #walks > div:last-child { grid-template-columns: 1fr !important; }
     .contact-grid { grid-template-columns: 1fr !important; }
     .hero { grid-template-columns: 1fr; }
@@ -578,6 +579,7 @@
         <a href="beaches.html">Beaches</a>
         <a href="index.html#walks">Walks</a>
         <a href="index.html#nearby">The Coast Nearby</a>
+        <a href="index.html#inside">Inside the cottage</a>
         <a href="index.html#contact">Contact</a>
       </div>
     </div>
@@ -797,6 +799,57 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" target="_blank" rel="noopener" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink);text-decoration:none;">holidaycottages.co.uk</a>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- INTERIOR SECTION -->
+<section id="inside" style="padding:5rem 5rem;background:#f2ede5;border-top:1px solid var(--sand);">
+  <div style="text-align:center;margin-bottom:3rem;">
+    <p style="font-family:'Jost',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:0.75rem;">Inside</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--ink);">The <em style="font-style:italic;color:var(--sage);">Garden House</em></h2>
+    <p style="font-size:0.9rem;color:var(--stone);max-width:55ch;margin:1rem auto 0;line-height:1.8;">Open-plan living, a proper kitchen and a comfortable double bedroom — everything you need for two, nothing you don&rsquo;t.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;">
+
+    <div style="overflow:hidden;">
+      <img src="images/interior-bedroom.jpg"
+        alt="Double bedroom at The Garden House — white linen, nautical cushions, garden view through the window"
+        style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;aspect-ratio:16/9;">
+      <div style="padding:0.9rem 0 0;">
+        <p style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.2rem;">Bedroom</p>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.6;">Double bed with white linen, bedside lighting, wardrobe and garden views through the window.</p>
+      </div>
+    </div>
+
+    <div style="overflow:hidden;">
+      <img src="images/interior-dining.jpg"
+        alt="Dining and kitchen area at The Garden House — round table, pendant light, fish prints and welcome basket"
+        style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;aspect-ratio:16/9;">
+      <div style="padding:0.9rem 0 0;">
+        <p style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.2rem;">Dining &amp; kitchen</p>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.6;">Open-plan dining area with round table, full kitchen with double oven and all the equipment you need.</p>
+      </div>
+    </div>
+
+    <div style="overflow:hidden;">
+      <img src="images/interior-bedroom2.jpg"
+        alt="Bedroom detail at The Garden House — white double bed, bold artwork and striped bedside lamp"
+        style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;aspect-ratio:16/9;">
+      <div style="padding:0.9rem 0 0;">
+        <p style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.2rem;">Detail</p>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.6;">Thoughtfully decorated with original artwork and individual touches throughout.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:2.5rem;">
+    <a href="https://www.holidaycottages.co.uk/cottage/oc-31078-the-garden-house" target="_blank" rel="noopener"
+      style="display:inline-block;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);background:var(--sage-dark);padding:0.85rem 2rem;text-decoration:none;">
+      See all photos &amp; book &rarr;
+    </a>
   </div>
 </section>
 
